@@ -1,29 +1,28 @@
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-main{
-  .poppins{
-      font-family: Poppins;
-      font-style: normal;
-    }
-    .break::after{
-      content: '\a';
-      white-space: pre;
-    }
-    #top{
-      background-color: aqua;
-      margin-top: 4.25rem;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      width: 100%;
-      padding: 0 4rem;
-    }
-  #creative{
-    span{
+main {
+  .poppins {
+    font-family: Poppins;
+    font-style: normal;
+  }
+  .break::after {
+    content: "\a";
+    white-space: pre;
+  }
+  #top {
+    margin-top: 4.25rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0 4rem;
+  }
+  #creative {
+    span {
       font-family: PT Serif;
       font-weight: 700;
       font-size: 2.25rem;
@@ -32,11 +31,11 @@ main{
       color: #000000;
     }
   }
-  #who-we-are{
+  #who-we-are {
     display: flex;
     flex-direction: column;
-    gap: .625rem;
-    #who-we-are-1{
+    gap: 0.625rem;
+    #who-we-are-1 {
       font-style: normal;
       font-weight: 600;
       font-size: 1.125rem;
@@ -44,45 +43,113 @@ main{
       text-transform: uppercase;
     }
 
-    #who-we-are-2{
+    #who-we-are-2 {
       font-weight: 400;
+      font-size: 1.125rem;
+      line-height: 1.6875rem;
+    }
+  }
+  #container {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(8, 5vw);
+    grid-gap: .0625rem;
+    margin-top: 5.875rem;
+    .items {
+      display: flex;
+      height: 60vh;
+      width: 100%;
+    }
+    .image {
+      display: flex;
+      flex-direction: column;
+    }
+
+    #item-1 {
+      // background-color: blueviolet;
+      grid-column-start: 1;
+      grid-column-end: 4;
+      grid-row-start: 1;
+      grid-row-end: 4;
+      justify-content: end;
+    }
+    #item-2 {
+      // background-color: brown;
+      justify-content: center;
+      margin-top: 1.29rem;
+      grid-column-start: 4;
+      grid-column-end: 7;
+      grid-row-start: 2;
+      grid-row-end: 5;
+    }
+    #item-3 {
+      // background-color: bisque;
+      grid-column-start: 7;
+      grid-column-end: 10;
+      grid-row-start: 1;
+      grid-row-end: 4;
+    }
+
+    img {
+      max-width: 100%;
+      // width: 1.0625rem;
+      height: 22.4375rem;
+    }
+
+    .role {
+      // -ms-writing-mode: sideways-rl;
+      // writing-mode: sideways-rl;
+      // text-orientation: upright;
+      font-size: .75rem;
+      padding-left: .625rem;
+      font-family: PT serif;
+      font-style: normal;
+      font-weight: 400;
+      text-transform: uppercase;
+      span::before{
+      transform: rotate(90deg);
+      
+      }
+    }
+
+    .name{
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: 600;
       font-size: 1.125rem;
       line-height: 1.6875rem;
     }
   }
 }
 
-
-
 // Media Queries
-@media screen and (max-width:780px) {
-  main{
-    
-    #top{
+@media screen and (max-width: 780px) {
+  main {
+    #top {
       margin-top: 4.25rem;
       display: flex;
       flex-direction: column;
       padding: 0 1rem;
     }
-  
-  #who-we-are{
-    margin-top: 2.55rem;
-    display: flex;
-    flex-direction: column;
-    gap: .625rem;
-    #who-we-are-1{
-      font-style: normal;
-      font-weight: 600;
-      font-size: 1.125rem;
-      line-height: 1.6875rem;
-      text-transform: uppercase;
-    }
 
-    #who-we-are-2{
-      font-weight: 400;
-      font-size: 1.125rem;
-      line-height: 1.6875rem;
+    #who-we-are {
+      margin-top: 2.55rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.625rem;
+      #who-we-are-1 {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.125rem;
+        line-height: 1.6875rem;
+        text-transform: uppercase;
+      }
+
+      #who-we-are-2 {
+        font-weight: 400;
+        font-size: 1.125rem;
+        line-height: 1.6875rem;
+      }
     }
-  }
   }
 }
