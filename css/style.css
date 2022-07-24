@@ -56,10 +56,12 @@ main #container .items {
   display: flex;
   height: 60vh;
   width: 100%;
+  position: relative;
 }
 main #container .image {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 main #container #item-1 {
   grid-column-start: 1;
@@ -93,9 +95,13 @@ main #container .role {
   font-style: normal;
   font-weight: 400;
   text-transform: uppercase;
+  width: 1.5625rem;
 }
-main #container .role span::before {
-  transform: rotate(90deg);
+main #container .role span {
+  position: absolute;
+  transform-origin: 0 0;
+  transform: rotate(90deg) translate(0, -100%);
+  top: 0.125rem;
 }
 main #container .name {
   font-family: Poppins;

@@ -53,16 +53,18 @@ main {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
     grid-template-rows: repeat(8, 5vw);
-    grid-gap: .0625rem;
+    grid-gap: 0.0625rem;
     margin-top: 5.875rem;
     .items {
       display: flex;
       height: 60vh;
       width: 100%;
+      position: relative;
     }
     .image {
       display: flex;
       flex-direction: column;
+      position: relative;
     }
 
     #item-1 {
@@ -100,19 +102,22 @@ main {
       // -ms-writing-mode: sideways-rl;
       // writing-mode: sideways-rl;
       // text-orientation: upright;
-      font-size: .75rem;
-      padding-left: .625rem;
+      font-size: 0.75rem;
+      padding-left: 0.625rem;
       font-family: PT serif;
       font-style: normal;
       font-weight: 400;
       text-transform: uppercase;
-      span::before{
-      transform: rotate(90deg);
-      
+      width: 1.5625rem;
+      span {
+        position: absolute;
+        transform-origin: 0 0;
+        transform: rotate(90deg) translate(0, -100%);
+        top: 0.125rem;
       }
     }
 
-    .name{
+    .name {
       font-family: Poppins;
       font-style: normal;
       font-weight: 600;
