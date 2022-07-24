@@ -1,0 +1,35 @@
+{
+  "name": "my-team-page",
+  "version": "1.0.0",
+  "description": "devChallenge Team page ",
+  "main": "index.js",
+  "scripts": {
+    "compile": "sass --watch scss:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zerebel/my-team-page.git"
+  },
+  "keywords": [
+    "Team",
+    "page",
+    "zerebel",
+    "html",
+    "css",
+    "scss",
+    "sass",
+    "team-page",
+    "devChallenges"
+  ],
+  "author": "Zerebel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zerebel/my-team-page/issues"
+  },
+  "homepage": "https://github.com/Zerebel/my-team-page#readme",
+  "dependencies": {
+    "autoprefixer": "^10.4.7",
+    "postcss": "^8.4.14",
+    "sass": "^1.54.0"
+  }
+}
