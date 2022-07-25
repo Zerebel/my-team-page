@@ -4,6 +4,10 @@
   padding: 0;
 }
 
+body {
+  background-color: #fafafa;
+}
+
 main .poppins {
   font-family: Poppins;
   font-style: normal;
@@ -48,15 +52,13 @@ main #who-we-are #who-we-are-2 {
 main #container {
   display: grid;
   grid-template-columns: repeat(9, 1fr);
-  grid-template-rows: repeat(8, 5vw);
+  grid-template-rows: repeat(13, 5vw);
   grid-gap: 0.0625rem;
   margin-top: 5.875rem;
 }
 main #container .items {
   display: flex;
-  height: 60vh;
-  width: 100%;
-  position: relative;
+  height: 50vh;
 }
 main #container .image {
   display: flex;
@@ -64,6 +66,7 @@ main #container .image {
   position: relative;
 }
 main #container #item-1 {
+  background-color: blueviolet;
   grid-column-start: 1;
   grid-column-end: 4;
   grid-row-start: 1;
@@ -71,6 +74,7 @@ main #container #item-1 {
   justify-content: end;
 }
 main #container #item-2 {
+  background-color: brown;
   justify-content: center;
   margin-top: 1.29rem;
   grid-column-start: 4;
@@ -79,10 +83,35 @@ main #container #item-2 {
   grid-row-end: 5;
 }
 main #container #item-3 {
+  background-color: bisque;
   grid-column-start: 7;
   grid-column-end: 10;
   grid-row-start: 1;
   grid-row-end: 4;
+}
+main #container #item-4 {
+  background-color: green;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 9;
+  grid-row-end: 12;
+  justify-content: end;
+}
+main #container #item-5 {
+  background-color: grey;
+  grid-column-start: 4;
+  grid-column-end: 7;
+  grid-row-start: 10;
+  grid-row-end: 14;
+  margin-top: 1.29rem;
+  justify-content: center;
+}
+main #container #item-6 {
+  background-color: yellow;
+  grid-column-start: 7;
+  grid-column-end: 10;
+  grid-row-start: 9;
+  grid-row-end: 12;
 }
 main #container img {
   max-width: 100%;
@@ -110,6 +139,17 @@ main #container .name {
   font-size: 1.125rem;
   line-height: 1.6875rem;
 }
+main .creator {
+  margin-top: 5.25rem;
+  margin-bottom: 1.25rem;
+  text-align: center;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 0.875rem;
+  color: #a9a9a9;
+  display: none;
+}
 
 @media screen and (max-width: 780px) {
   main #top {
@@ -135,6 +175,21 @@ main #container .name {
     font-weight: 400;
     font-size: 1.125rem;
     line-height: 1.6875rem;
+  }
+  main #container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5.875rem;
+    padding: 0;
+  }
+  main #container .container > * {
+    flex: 1 1 30vh;
+  }
+  main #container .items {
+    display: flex;
+    height: 39vh;
+    width: 90%;
+    position: relative;
   }
 }
 
