@@ -51,14 +51,14 @@ main #who-we-are #who-we-are-2 {
 }
 main #container {
   display: grid;
-  grid-template-columns: repeat(9, 1fr);
-  grid-template-rows: repeat(13, 5vw);
-  grid-gap: 0.0625rem;
   margin-top: 5.875rem;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto;
+  row-gap: 48px;
 }
 main #container .items {
   display: flex;
-  height: 50vh;
+  max-width: 100%;
 }
 main #container .image {
   display: flex;
@@ -66,52 +66,24 @@ main #container .image {
   position: relative;
 }
 main #container #item-1 {
-  background-color: blueviolet;
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 4;
-  justify-content: end;
+  justify-self: end;
 }
 main #container #item-2 {
-  background-color: brown;
-  justify-content: center;
-  margin-top: 1.29rem;
-  grid-column-start: 4;
-  grid-column-end: 7;
-  grid-row-start: 2;
-  grid-row-end: 5;
+  margin-top: 4.652rem;
+  justify-self: center;
 }
 main #container #item-3 {
-  background-color: bisque;
-  grid-column-start: 7;
-  grid-column-end: 10;
-  grid-row-start: 1;
-  grid-row-end: 4;
+  justify-self: start;
 }
 main #container #item-4 {
-  background-color: green;
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 9;
-  grid-row-end: 12;
-  justify-content: end;
+  justify-self: end;
 }
 main #container #item-5 {
-  background-color: grey;
-  grid-column-start: 4;
-  grid-column-end: 7;
-  grid-row-start: 10;
-  grid-row-end: 14;
-  margin-top: 1.29rem;
-  justify-content: center;
+  justify-self: center;
+  margin-top: 4.652rem;
 }
 main #container #item-6 {
-  background-color: yellow;
-  grid-column-start: 7;
-  grid-column-end: 10;
-  grid-row-start: 9;
-  grid-row-end: 12;
+  justify-self: start;
 }
 main #container img {
   max-width: 100%;
@@ -125,6 +97,7 @@ main #container .role {
   font-weight: 400;
   text-transform: uppercase;
   width: 1.5625rem;
+  position: relative;
 }
 main #container .role span {
   position: absolute;
@@ -148,7 +121,6 @@ main .creator {
   font-weight: 900;
   font-size: 0.875rem;
   color: #a9a9a9;
-  display: none;
 }
 
 @media screen and (max-width: 780px) {
@@ -177,19 +149,65 @@ main .creator {
     line-height: 1.6875rem;
   }
   main #container {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
     margin-top: 5.875rem;
-    padding: 0;
-  }
-  main #container .container > * {
-    flex: 1 1 30vh;
+    padding: 0 0.7764rem;
+    column-gap: 6px;
   }
   main #container .items {
     display: flex;
-    height: 39vh;
-    width: 90%;
+    width: auto;
     position: relative;
+  }
+  main #container #item-1 {
+    justify-self: end;
+  }
+  main #container #item-2 {
+    margin-top: 2.902rem;
+    justify-self: save;
+  }
+  main #container #item-3 {
+    justify-self: save;
+  }
+  main #container #item-4 {
+    justify-self: save;
+    margin-top: 2.902rem;
+  }
+  main #container #item-5 {
+    justify-self: save;
+    margin-top: unset;
+  }
+  main #container #item-6 {
+    justify-self: save;
+    margin-top: 2.902rem;
+  }
+  main #container img {
+    max-width: 100%;
+    height: 22.4375rem;
+  }
+  main #container img {
+    max-width: 90%;
+    width: 12.5rem;
+    height: min-content;
+  }
+  main #container .role {
+    font-size: 0.625rem;
+    line-height: 0.8125rem;
+    padding-left: 0.00125rem;
+    width: 1rem;
+    position: relative;
+  }
+  main #container .role span {
+    position: absolute;
+    transform-origin: 0 0;
+    transform: rotate(90deg) translate(0, -30%);
+    top: 0.125rem;
+  }
+  main #container .name {
+    font-size: 0.875rem;
+    line-height: 1.3125rem;
   }
 }
 
