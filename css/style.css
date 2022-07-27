@@ -169,18 +169,18 @@ main .creator {
     justify-self: save;
   }
   main #container #item-3 {
-    justify-self: save;
+    justify-self: end;
   }
   main #container #item-4 {
-    justify-self: save;
+    justify-self: center;
     margin-top: 2.902rem;
   }
   main #container #item-5 {
-    justify-self: save;
+    justify-self: end;
     margin-top: unset;
   }
   main #container #item-6 {
-    justify-self: save;
+    justify-self: center;
     margin-top: 2.902rem;
   }
   main #container img {
