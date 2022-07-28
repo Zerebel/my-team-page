@@ -1,3 +1,6 @@
+/*
+*Creator: Tanu Zerebel.
+*/
 * {
   box-sizing: border-box;
   margin: 0;
@@ -78,16 +81,19 @@ main #container #item-3 {
 main #container #item-4 {
   justify-self: end;
 }
-main #container #item-5 {
-  justify-self: center;
-  margin-top: 4.652rem;
+@media (min-width: 768px) {
+  main #container #item-5 {
+    justify-self: center;
+    margin-top: 4.652rem;
+  }
 }
 main #container #item-6 {
   justify-self: start;
 }
 main #container img {
   max-width: 100%;
-  height: 22.4375rem;
+  max-height: 100%;
+  height: 52vh;
 }
 main #container .role {
   font-size: 0.75rem;
@@ -98,6 +104,7 @@ main #container .role {
   text-transform: uppercase;
   width: 1.5625rem;
   position: relative;
+  line-height: 1rem;
 }
 main #container .role span {
   position: absolute;
@@ -121,6 +128,126 @@ main .creator {
   font-weight: 900;
   font-size: 0.875rem;
   color: #a9a9a9;
+}
+
+@media (max-width: 575.98px) {
+  main #top {
+    padding: 0 10px;
+    justify-content: space-between;
+    gap: 38px;
+    margin-top: 3.3125rem;
+  }
+  main #top #who-we-are {
+    gap: 0.625rem;
+  }
+  main #top #who-we-are #who-we-are-2 {
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.3125rem;
+  }
+  main #container {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    margin-top: 2.375rem;
+    row-gap: 1.3875rem;
+  }
+  main #container #item-1 {
+    justify-self: center;
+  }
+  main #container #item-2 {
+    margin-top: 3.652rem;
+    justify-self: center;
+  }
+  main #container #item-3 {
+    justify-self: center;
+  }
+  main #container #item-4 {
+    justify-self: center;
+    margin-top: 3.652rem;
+  }
+  main #container #item-5 {
+    justify-self: center;
+  }
+  main #container #item-6 {
+    justify-self: center;
+    margin-top: 3.652rem;
+  }
+  main #container img {
+    max-width: 96%;
+    height: 30vh;
+  }
+  main #container .role {
+    font-size: 0.625rem;
+    padding-left: 0.025rem;
+    font-weight: 400;
+    width: 0.5625rem;
+    line-height: 0.8125rem;
+  }
+  main #container .role span {
+    top: 0.125rem;
+  }
+  main #container .name {
+    font-size: 0.875rem;
+    line-height: 1.3125rem;
+  }
+}
+@media (max-width: 828.98px) and (min-width: 575.98px) {
+  main #top {
+    padding: 0 10px;
+    justify-content: space-around;
+    gap: 38px;
+    margin-top: 3.3125rem;
+  }
+  main #top #who-we-are {
+    gap: 0.625rem;
+  }
+  main #top #who-we-are #who-we-are-2 {
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.3125rem;
+  }
+  main #container {
+    margin-top: 2.375rem;
+    row-gap: 1.3875rem;
+  }
+  main #container #item-1 {
+    justify-self: center;
+  }
+  main #container #item-2 {
+    margin-top: 3.652rem;
+    justify-self: center;
+  }
+  main #container #item-3 {
+    justify-self: center;
+  }
+  main #container #item-4 {
+    justify-self: center;
+  }
+  main #container #item-5 {
+    justify-self: center;
+    margin-top: 3.652rem;
+  }
+  main #container #item-6 {
+    justify-self: center;
+  }
+  main #container img {
+    max-width: 96%;
+    height: 37vh;
+  }
+  main #container .role {
+    font-size: 0.625rem;
+    padding-left: 0.025rem;
+    font-weight: 400;
+    width: 0.5625rem;
+    line-height: 0.8125rem;
+  }
+  main #container .role span {
+    top: 0.125rem;
+  }
+  main #container .name {
+    font-size: 0.875rem;
+    line-height: 1.3125rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

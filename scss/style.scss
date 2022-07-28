@@ -1,3 +1,6 @@
+/*
+*Creator: Tanu Zerebel.
+*/
 * {
   box-sizing: border-box;
   margin: 0;
@@ -46,7 +49,7 @@ main {
       line-height: 1.6875rem;
       text-transform: uppercase;
     }
-    
+
     #who-we-are-2 {
       font-weight: 400;
       font-size: 1.125rem;
@@ -59,7 +62,7 @@ main {
     grid-template-columns: auto auto auto;
     grid-template-rows: auto auto;
     row-gap: 3rem;
-    
+
     .items {
       display: flex;
       max-width: 100%;
@@ -69,7 +72,7 @@ main {
       flex-direction: column;
       position: relative;
     }
-    
+
     #item-1 {
       justify-self: end;
     }
@@ -83,21 +86,23 @@ main {
     #item-4 {
       justify-self: end;
     }
-    
-    #item-5 {
-      justify-self: center;
-      margin-top: 4.652rem;
+    @media (min-width: 768px) {
+      #item-5 {
+        justify-self: center;
+        margin-top: 4.652rem;
+      }
     }
-    
+
     #item-6 {
       justify-self: start;
     }
     img {
       max-width: 100%;
       // width: 1.0625rem;
-      height: 22.4375rem;
+      max-height: 100%;
+      height: 52vh;
     }
-    
+
     .role {
       // -ms-writing-mode: sideways-rl;
       // writing-mode: sideways-rl;
@@ -110,6 +115,7 @@ main {
       text-transform: uppercase;
       width: 1.5625rem;
       position: relative;
+      line-height: 1rem;
       span {
         position: absolute;
         transform-origin: 0 0;
@@ -117,11 +123,11 @@ main {
         top: 0.125rem;
       }
     }
-  .name {
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 1.125rem;
+    .name {
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 1.125rem;
       line-height: 1.6875rem;
     }
   }
@@ -134,5 +140,147 @@ main {
     font-weight: 900;
     font-size: 0.875rem;
     color: #a9a9a9;
+  }
+}
+
+// * Media Queries
+// `sm` applies to x-small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+  main {
+    #top {
+      padding: 0 10px;
+      justify-content: space-between;
+      gap: 38px;
+      margin-top: 3.3125rem;
+      #who-we-are {
+        gap: 0.625rem;
+        #who-we-are-2 {
+          font-weight: 400;
+          font-size: 0.875rem;
+          line-height: 1.3125rem;
+        }
+      }
+    }
+
+    #container {
+      grid-template-columns: auto auto;
+      grid-template-rows: auto auto auto;
+      margin-top: 2.375rem;
+      row-gap: 1.3875rem;
+      #item-1 {
+        justify-self: center;
+      }
+      #item-2 {
+        margin-top: 3.652rem;
+        justify-self: center;
+      }
+      #item-3 {
+        justify-self: center;
+      }
+      #item-4 {
+        justify-self: center;
+        margin-top: 3.652rem;
+      }
+
+      #item-5 {
+        justify-self: center;
+      }
+
+      #item-6 {
+        justify-self: center;
+        margin-top: 3.652rem;
+      }
+      img {
+        max-width: 96%;
+        // width: 1.0625rem;
+        height: 30vh;
+      }
+      .role {
+        // -ms-writing-mode: sideways-rl;
+        // writing-mode: sideways-rl;
+        // text-orientation: upright;
+        font-size: 0.625rem;
+        padding-left: 0.025rem;
+        font-weight: 400;
+        width: 0.5625rem;
+        line-height: 0.8125rem;
+        span {
+          top: 0.125rem;
+        }
+      }
+      .name {
+        font-size: 0.875rem;
+        line-height: 1.3125rem;
+      }
+    }
+  }
+}
+
+// `md` applies to small devices (landscape phones, less than 768px)
+@media (max-width: 828.98px) and (min-width: 575.98px) {
+  main {
+    #top {
+      padding: 0 10px;
+      justify-content: space-around;
+      gap: 38px;
+      margin-top: 3.3125rem;
+      #who-we-are {
+        gap: 0.625rem;
+        #who-we-are-2 {
+          font-weight: 400;
+          font-size: 0.875rem;
+          line-height: 1.3125rem;
+        }
+      }
+    }
+
+    #container {
+      margin-top: 2.375rem;
+      row-gap: 1.3875rem;
+      #item-1 {
+        justify-self: center;
+      }
+      #item-2 {
+        margin-top: 3.652rem;
+        justify-self: center;
+      }
+      #item-3 {
+        justify-self: center;
+      }
+      #item-4 {
+        justify-self: center;
+      }
+
+      #item-5 {
+        justify-self: center;
+        margin-top: 3.652rem;
+      }
+
+      #item-6 {
+        justify-self: center;
+      }
+      img {
+        max-width: 96%;
+        // width: 1.0625rem;
+        height: 37vh;
+      }
+      .role {
+        // -ms-writing-mode: sideways-rl;
+        // writing-mode: sideways-rl;
+        // text-orientation: upright;
+        font-size: 0.625rem;
+        padding-left: 0.025rem;
+        font-weight: 400;
+        width: 0.5625rem;
+        line-height: 0.8125rem;
+        span {
+          top: 0.125rem;
+        }
+      }
+      .name {
+        font-size: 0.875rem;
+        line-height: 1.3125rem;
+      }
+    }
   }
 }
