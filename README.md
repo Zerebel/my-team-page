@@ -65,4 +65,4 @@ This application/site was created as a submission to a [DevChallenges](https://d
 ## Contact
 
 - GitHub [@Zerebel](https://github.com/Zerebel)
-- Twitter [@Zerbel_](https://twitter.com/Zerebel_)
+- Twitter [@Zerebel_](https://twitter.com/Zerebel_)
